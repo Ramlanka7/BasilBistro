@@ -8,11 +8,28 @@
 *{box-sizing:border-box}
 body{font-family:Arial,Helvetica,sans-serif;color:#222;background:var(--bg);margin:0;line-height:1.5}
 .container{max-width:1000px;margin:0 auto;padding:1rem}
-.site-header{background:#fff;border-bottom:1px solid #eee}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
-.logo{margin:0;color:var(--accent)}
-.site-nav a{margin-left:1rem;color:#333;text-decoration:none}
-.site-nav a.active{font-weight:700;color:var(--accent-dark)}
+.site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;position:relative}
+.logo-link{text-decoration:none;transition:opacity .3s}
+.logo-link:hover{opacity:0.8}
+.logo{margin:0;color:var(--accent-dark);font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:2rem;font-weight:400;letter-spacing:3px;text-transform:uppercase}
+.mobile-menu-toggle{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:0.5rem;position:relative;width:35px;height:35px;justify-content:center;align-items:flex-end}
+.mobile-menu-toggle span{display:block;width:25px;height:2px;background:var(--accent-dark);border-radius:2px;transition:all .3s ease}
+.mobile-menu-toggle span:nth-child(2){width:23px}
+.site-nav{display:flex;gap:0.5rem}
+.site-nav a{padding:0.5rem 1rem;color:#333;text-decoration:none;border-radius:4px;transition:all .3s;font-weight:500}
+.site-nav a:hover{background:rgba(47,122,74,0.1);color:var(--accent-dark)}
+.site-nav a.active{font-weight:700;color:#fff;background:var(--accent-dark)}
+
+@media (max-width:768px){
+  .header-inner{display:flex;flex-direction:row;align-items:center;justify-content:center;position:relative}
+  .mobile-menu-toggle{display:flex;position:absolute;right:0}
+  .logo-link{flex:0}
+  .site-nav{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:1rem;box-shadow:0 4px 8px rgba(0,0,0,0.1);display:none}
+  .site-nav.active{display:flex}
+  .site-nav a{padding:1rem;border-bottom:1px solid #f0f0f0}
+  .logo{font-size:1.5rem;letter-spacing:2px}
+}
 .hero{background:linear-gradient(180deg, #f7f7f5 0%, #fff 100%);padding:3rem 0;text-align:center}
 .hero-with-bg{background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url('../images/food/pasta2.jpg') center center no-repeat;background-size:cover;padding:10rem 0;min-height:700px;display:flex;align-items:center}
 .hero-with-bg .container{padding:3rem 2rem}
