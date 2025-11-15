@@ -12,7 +12,7 @@ body{font-family:Arial,Helvetica,sans-serif;color:#222;background:var(--bg);marg
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;position:relative}
 .logo-link{text-decoration:none;transition:opacity .3s}
 .logo-link:hover{opacity:0.8}
-.logo{margin:0;color:var(--accent-dark);font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:2rem;font-weight:400;letter-spacing:3px;text-transform:uppercase}
+.logo{margin:0;color:#1fa855;font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:2.2rem;font-weight:500;letter-spacing:3px;text-transform:uppercase}
 .header-order-icons{display:flex;gap:0.75rem;align-items:center;margin-left:1rem}
 .header-order-icons a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:transparent;transition:all .3s}
 .header-order-icons a.whatsapp-icon{background:#25D366}
@@ -44,7 +44,7 @@ body{font-family:Arial,Helvetica,sans-serif;color:#222;background:var(--bg);marg
   .site-nav{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:1rem;box-shadow:0 4px 8px rgba(0,0,0,0.1);display:none}
   .site-nav.active{display:flex}
   .site-nav a{padding:1rem;border-bottom:1px solid #f0f0f0}
-  .logo{font-size:1.5rem;letter-spacing:2px}
+  .logo{font-size:1.5rem;letter-spacing:2px;white-space:nowrap}
 }
 .hero{background:linear-gradient(180deg, #f7f7f5 0%, #fff 100%);padding:3rem 0;text-align:center}
 .hero-with-bg{background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url('../images/food/pasta2.jpg') center center no-repeat;background-size:cover;padding:10rem 0;min-height:700px;display:flex;align-items:center}
