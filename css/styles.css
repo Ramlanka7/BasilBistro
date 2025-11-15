@@ -124,7 +124,7 @@ body{font-family:Arial,Helvetica,sans-serif;color:#222;background:var(--bg);marg
 .contact-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1rem}
 .contact-card{background:#fff;border:1px solid #f0f0f0;border-radius:8px;padding:1rem;display:flex;align-items:flex-start;gap:1rem}
 .contact-card h3{margin:.25rem 0}
-.contact-card .icon{flex:0 0 48px}
+.contact-card .icon{flex:0 0 48px;display:flex;align-items:center;justify-content:center}
 .contact-card .contact-content{flex:1}
 .contact-card a{color:var(--accent-dark);text-decoration:none}
 .contact-card a:hover{text-decoration:underline}
