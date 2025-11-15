@@ -13,18 +13,34 @@ body{font-family:Arial,Helvetica,sans-serif;color:#222;background:var(--bg);marg
 .logo-link{text-decoration:none;transition:opacity .3s}
 .logo-link:hover{opacity:0.8}
 .logo{margin:0;color:var(--accent-dark);font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:2rem;font-weight:400;letter-spacing:3px;text-transform:uppercase}
+.header-order-icons{display:flex;gap:0.75rem;align-items:center;margin-left:1rem}
+.header-order-icons a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:transparent;transition:all .3s}
+.header-order-icons a.whatsapp-icon{background:#25D366}
+.header-order-icons a.whatsapp-icon:hover{background:#1fa855;transform:translateY(-2px)}
+.header-order-icons a.zomato-icon,
+.header-order-icons a.swiggy-icon{background:transparent}
+.header-order-icons a.zomato-icon:hover,
+.header-order-icons a.swiggy-icon:hover{transform:translateY(-2px)}
+.header-order-icons img{width:38px;height:38px;object-fit:contain}
+.header-order-icons a:hover{transform:translateY(-2px);background:rgba(47,122,74,.1)}
+.header-order-icons svg{width:24px;height:24px}
 .mobile-menu-toggle{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:0.5rem;position:relative;width:35px;height:35px;justify-content:center;align-items:flex-end}
 .mobile-menu-toggle span{display:block;width:25px;height:2px;background:var(--accent-dark);border-radius:2px;transition:all .3s ease}
 .mobile-menu-toggle span:nth-child(2){width:23px}
 .site-nav{display:flex;gap:0.5rem}
-.site-nav a{padding:0.5rem 1rem;color:#333;text-decoration:none;border-radius:4px;transition:all .3s;font-weight:500}
+.site-nav a{padding:0.5rem 1rem;color:#333;text-decoration:none;border-radius:4px;transition:all .3s;font-weight:500;font-size:1rem;letter-spacing:0.5px;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
 .site-nav a:hover{background:rgba(47,122,74,0.1);color:var(--accent-dark)}
-.site-nav a.active{font-weight:700;color:#fff;background:var(--accent-dark)}
+.site-nav a.active{font-weight:600;color:var(--accent-dark);background:rgba(47,122,74,0.08)}
 
 @media (max-width:768px){
-  .header-inner{display:flex;flex-direction:row;align-items:center;justify-content:center;position:relative}
-  .mobile-menu-toggle{display:flex;position:absolute;right:0}
-  .logo-link{flex:0}
+  .header-inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;position:relative;padding:1rem}
+  .logo-link{grid-column:1;justify-self:center}
+  .header-order-icons{grid-column:2;gap:0.5rem;margin-left:0.5rem}
+  .header-order-icons a{width:36px;height:36px}
+  .header-order-icons svg{width:20px;height:20px}
+  .header-order-icons a:nth-child(1){display:flex}
+  .header-order-icons a:nth-child(2),.header-order-icons a:nth-child(3){display:none}
+  .mobile-menu-toggle{grid-column:3;display:flex;justify-self:end}
   .site-nav{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:1rem;box-shadow:0 4px 8px rgba(0,0,0,0.1);display:none}
   .site-nav.active{display:flex}
   .site-nav a{padding:1rem;border-bottom:1px solid #f0f0f0}
@@ -57,9 +73,15 @@ body{font-family:Arial,Helvetica,sans-serif;color:#222;background:var(--bg);marg
 .footer-section address{font-style:normal;line-height:1.6;font-size:.95rem}
 .footer-section p{margin:0;font-size:.95rem}
 .social-icons,.order-icons{display:flex;gap:.75rem;flex-wrap:wrap}
-.social-icons a,.order-icons a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#f5f5f5;transition:background .2s}
-.social-icons a:hover,.order-icons a:hover{background:rgba(47,122,74,.1)}
-.social-icons svg,.order-icons svg{width:20px;height:20px}
+.social-icons a{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:#f5f5f5;transition:all .3s}
+.order-icons a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:transparent;transition:all .3s}
+.order-icons a.whatsapp-icon{background:#25D366}
+.order-icons a.whatsapp-icon:hover{background:#1fa855}
+.social-icons a:hover{background:rgba(47,122,74,.1);transform:translateY(-2px)}
+.order-icons a:hover{transform:translateY(-2px)}
+.social-icons svg{width:28px;height:28px}
+.order-icons svg{width:24px;height:24px}
+.order-icons img{width:38px;height:38px;object-fit:contain}
 
 @media (max-width:900px){
   .footer-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}
@@ -102,7 +124,7 @@ body{font-family:Arial,Helvetica,sans-serif;color:#222;background:var(--bg);marg
 .contact-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1rem}
 .contact-card{background:#fff;border:1px solid #f0f0f0;border-radius:8px;padding:1rem;display:flex;align-items:flex-start;gap:1rem}
 .contact-card h3{margin:.25rem 0}
-.contact-card .icon{flex:0 0 48px}
+.contact-card .icon{flex:0 0 48px;display:flex;align-items:center;justify-content:center}
 .contact-card .contact-content{flex:1}
 .contact-card a{color:var(--accent-dark);text-decoration:none}
 .contact-card a:hover{text-decoration:underline}
