@@ -39,7 +39,29 @@
 
     <main>
       <section class="hero hero-with-bg">
-        <div class="container">
+        <div class="carousel">
+          <div class="carousel-slide active">
+            <img src="images/food/pasta.jpg" alt="Delicious pasta dish">
+          </div>          
+          <div class="carousel-slide">
+            <img src="images/food/pizza.jpg" alt="Wood-fired pizza">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/food/pasta1.png" alt="Fresh pasta">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/food/biryani.png" alt="Aromatic biryani">
+          </div>
+          <button class="carousel-btn prev" aria-label="Previous slide">&lt;</button>
+          <button class="carousel-btn next" aria-label="Next slide">&gt;</button>
+          <div class="carousel-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+          </div>
+        </div>
+        <div class="container hero-content">
           <h2>Welcome to Basil Bistro</h2>
           <p>
             <a class="btn" href="menu.html">See Our Menu</a>
@@ -153,5 +175,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/carousel.js"></script>
   </body>
 </html>
