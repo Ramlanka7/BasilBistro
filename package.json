@@ -1,0 +1,11 @@
+{
+  "name": "basil-bistro",
+  "version": "1.0.0",
+  "description": "Basil Bistro Restaurant Website",
+  "scripts": {
+    "start": "npx http-server -p 8080"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
