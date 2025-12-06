@@ -197,14 +197,14 @@ const BasilBistro = {
     
     if (toggle && nav) {
       toggle.addEventListener('click', () => {
-        nav.classList.toggle('open');
+        nav.classList.toggle('active');
         toggle.classList.toggle('active');
       });
 
       // Close menu when clicking a link
       nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-          nav.classList.remove('open');
+          nav.classList.remove('active');
           toggle.classList.remove('active');
         });
       });
