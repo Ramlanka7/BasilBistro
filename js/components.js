@@ -1,6 +1,18 @@
 // Basil Bistro - Reusable Components
 // This file eliminates header/footer duplication across pages
 
+// Google Ads Conversion Tracking
+function trackConversion(conversionType) {
+  if (typeof gtag === 'function') {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-16466652766/n7gPCPPYvssbEN7c9Ks9',
+      'event_callback': function() {
+        console.log('Conversion tracked: ' + conversionType);
+      }
+    });
+  }
+}
+
 const BasilBistro = {
   // Site configuration - single source of truth
   config: {
@@ -69,13 +81,13 @@ const BasilBistro = {
       <div class="container header-inner">
         <a href="index.html" class="logo-link"><h1 class="logo">Basil Bistro</h1></a>
         <div class="header-order-icons">
-          <a href="${this.config.whatsappLink}" aria-label="Order on WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer" class="whatsapp-icon">
+          <a href="${this.config.whatsappLink}" onclick="trackConversion('whatsapp_header')" aria-label="Order on WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer" class="whatsapp-icon">
             ${this.icons.whatsapp}
           </a>
-          <a href="${this.config.zomatoLink}" aria-label="Order on Zomato" title="Zomato" target="_blank" rel="noopener noreferrer" class="zomato-icon">
+          <a href="${this.config.zomatoLink}" onclick="trackConversion('zomato_header')" aria-label="Order on Zomato" title="Zomato" target="_blank" rel="noopener noreferrer" class="zomato-icon">
             <img src="images/svg/zomato.png" alt="Zomato" width="75" height="75">
           </a>
-          <a href="${this.config.swiggyLink}" aria-label="Order on Swiggy" title="Swiggy" target="_blank" rel="noopener noreferrer" class="swiggy-icon">
+          <a href="${this.config.swiggyLink}" onclick="trackConversion('swiggy_header')" aria-label="Order on Swiggy" title="Swiggy" target="_blank" rel="noopener noreferrer" class="swiggy-icon">
             <img src="images/svg/swiggy.svg" alt="Swiggy" width="24" height="24">
           </a>
         </div>
@@ -112,11 +124,11 @@ const BasilBistro = {
           <div class="footer-section">
             <h4>Contact Us</h4>
             <p style="margin: 0;">
-              <a href="tel:${this.config.phone}" style="color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+              <a href="tel:${this.config.phone}" onclick="trackConversion('phone_click')" style="color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
                 ${this.icons.phone}
                 <span style="font-size: 1.1rem;">${this.config.phone.replace(/(\d{2})(\d{5})(\d{5})/, '+$1 $2 $3')}</span>
               </a>
-              <a href="mailto:${this.config.email}" style="color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+              <a href="mailto:${this.config.email}" onclick="trackConversion('email_click')" style="color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
                 ${this.icons.email}
                 <span style="font-size: 1.1rem;">${this.config.email}</span>
               </a>
@@ -144,13 +156,13 @@ const BasilBistro = {
           <div class="footer-section">
             <h4>Order On</h4>
             <div class="order-icons">
-              <a href="${this.config.whatsappLink}" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer" class="whatsapp-icon">
+              <a href="${this.config.whatsappLink}" onclick="trackConversion('whatsapp_footer')" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer" class="whatsapp-icon">
                 ${this.icons.whatsapp}
               </a>
-              <a href="${this.config.zomatoOrderLink}" aria-label="Zomato" title="Zomato" target="_blank" rel="noopener noreferrer">
+              <a href="${this.config.zomatoOrderLink}" onclick="trackConversion('zomato_footer')" aria-label="Zomato" title="Zomato" target="_blank" rel="noopener noreferrer">
                 <img src="images/svg/zomato.png" alt="Zomato" width="38" height="38">
               </a>
-              <a href="${this.config.swiggyOrderLink}" aria-label="Swiggy" title="Swiggy" target="_blank" rel="noopener noreferrer">
+              <a href="${this.config.swiggyOrderLink}" onclick="trackConversion('swiggy_footer')" aria-label="Swiggy" title="Swiggy" target="_blank" rel="noopener noreferrer">
                 <img src="images/svg/swiggy.svg" alt="Swiggy" width="38" height="38">
               </a>
             </div>
@@ -185,14 +197,14 @@ const BasilBistro = {
     
     if (toggle && nav) {
       toggle.addEventListener('click', () => {
-        nav.classList.toggle('open');
+        nav.classList.toggle('active');
         toggle.classList.toggle('active');
       });
 
       // Close menu when clicking a link
       nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-          nav.classList.remove('open');
+          nav.classList.remove('active');
           toggle.classList.remove('active');
         });
       });
