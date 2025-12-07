@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
 /* Basic styles for Basil Bistro */
 :root{
   --accent:#2f7a4a;
@@ -6,7 +8,7 @@
   --bg:#fffdf8;
 }
 *{box-sizing:border-box}
-body{font-family:Arial,Helvetica,sans-serif;color:#222;background:var(--bg);margin:0;line-height:1.5}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#222;background:var(--bg);margin:0;line-height:1.5}
 .container{max-width:1000px;margin:0 auto;padding:1rem}
 .site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;position:relative}
@@ -71,8 +73,8 @@ body{font-family:Arial,Helvetica,sans-serif;color:#222;background:var(--bg);marg
 .btn{display:inline-block;background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:4px;text-decoration:none}
 .btn.outline{background:transparent;color:var(--accent);border:2px solid var(--accent);margin-left:.5rem}
 .about{padding:2rem 0}
-.section-title{font-family:Georgia,'Times New Roman',serif;font-size:2rem;color:var(--accent-dark);margin:2rem 0 1.5rem;font-weight:400;letter-spacing:1px;text-align:center}
-.dish-name{font-family:Georgia,'Times New Roman',serif;font-size:1.3rem;color:var(--accent-dark);margin:0 0 0.75rem;font-weight:400;letter-spacing:0.5px}
+.section-title{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:2rem;color:var(--accent-dark);margin:2rem 0 1.5rem;font-weight:400;letter-spacing:1px;text-align:center}
+.dish-name{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:1.3rem;color:var(--accent-dark);margin:0 0 0.75rem;font-weight:400;letter-spacing:0.5px}
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1rem}
 .features article{background:#fff;padding:1rem;border-radius:6px;border:1px solid #f0f0f0}
 .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
@@ -105,8 +107,27 @@ body{font-family:Arial,Helvetica,sans-serif;color:#222;background:var(--bg);marg
 }
 
 /* Menu Gallery */
-.menu-title{font-size:2.5rem;text-align:center;color:var(--accent-dark);margin:2rem 0 1rem;font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:1px;position:relative;padding-bottom:1rem}
-.menu-title::after{content:'';display:block;width:80px;height:2px;background:var(--accent);margin:1rem auto 0;border-radius:2px}
+.menu-title{
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  font-size:3rem;
+  font-weight:400;
+  color:#2f7a4a;
+  text-align:center;
+  margin:0.8rem 0 0.5rem;
+  letter-spacing:2px;
+  position:relative;
+  padding-bottom:0.3rem;
+}
+
+.menu-title::after{
+  content:'';
+  display:block;
+  width:80px;
+  height:2px;
+  background:#2f7a4a;
+  margin:0.3rem auto 0;
+  border-radius:2px;
+}
 .page-title{font-size:2.5rem;text-align:center;color:var(--accent-dark);margin:2rem 0 1rem;font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:1px;position:relative;padding-bottom:1rem}
 .page-title::after{content:'';display:block;width:80px;height:2px;background:var(--accent);margin:1rem auto 0;border-radius:2px}
 .menu-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin:2rem 0}
@@ -116,6 +137,126 @@ body{font-family:Arial,Helvetica,sans-serif;color:#222;background:var(--bg);marg
 
 @media (max-width:768px){
   .menu-gallery{grid-template-columns:1fr}
+}
+
+/* New elegant menu styles */
+.menu-sections{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0.8rem;
+  margin:0.5rem 0;
+}
+
+.menu-section{
+  background:transparent;
+  border:none;
+  box-shadow:none;
+  padding:0;
+  margin:0;
+}
+
+.menu-section h3{
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  font-size:1.8rem;
+  font-weight:400;
+  color:#1a1a1a;
+  margin:0 0 0.2rem;
+  padding-bottom:0.5rem;
+  border-bottom:2px solid #2f7a4a;
+  letter-spacing:1px;
+  display:block !important;
+  text-align:left;
+  justify-content:flex-start !important;
+}
+
+.menu-section h3::before,
+.menu-section h3::after{
+  display:none !important;
+}
+
+.menu-desc{
+  color:#666;
+  font-size:0.95rem;
+  font-style:italic;
+  margin:0.2rem 0 0.5rem;
+  line-height:1.5;
+}
+
+.menu-items{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0.6rem;
+}
+
+.menu-item{
+  display:block;
+  padding:0;
+  border:none !important;
+  align-items:unset;
+  justify-content:unset;
+}
+
+.dish{
+  max-width:100% !important;
+  min-width:unset !important;
+}
+
+.dish-name{
+  display:block;
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  font-size:1.15rem;
+  font-weight:600;
+  color:#1a1a1a;
+  margin:0 0 0.3rem;
+  letter-spacing:0.3px;
+}
+
+.dish-desc{
+  display:block;
+  color:#777;
+  font-size:0.9rem;
+  margin:0.3rem 0 0;
+  line-height:1.4;
+  font-style:italic;
+}
+
+.price{
+  display:none !important;
+}
+
+.menu-item:nth-child(n+1) .dish-name::before{
+  content:'•';
+  display:inline-block;
+  color:#2f7a4a;
+  margin-right:0.6rem;
+  opacity:0.6;
+}
+
+/* Subsection category headers (Coffee & Tea, Cold Beverages, Dessert) */
+.menu-items .dish strong.dish-name{
+  display:block;
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  font-size:1.15rem;
+  font-weight:600;
+  color:#2f7a4a;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin:1.5rem 0 0.8rem;
+  padding-top:0;
+  border-top:none;
+  position:relative;
+}
+
+.menu-items .dish strong.dish-name::before{
+  content:'';
+  display:none;
+}
+
+@media (max-width:900px){
+  .menu-sections{grid-template-columns:1fr}
 }
 
 .menu-section{margin:1.25rem 0}
@@ -153,4 +294,56 @@ body{font-family:Arial,Helvetica,sans-serif;color:#222;background:var(--bg);marg
 .map-card{grid-column:1/-1;padding:0}
 .map-card h3{padding:1rem}
 .map-card .map-wrap{padding-bottom:50%}
+
+/* Remove old section title overrides - use consistent styling */
+/* Responsive menu sections */
+@media (max-width:768px){
+  .menu-sections{
+    gap:2rem;
+    margin:2rem 0;
+  }
+  
+  .menu-section h3{
+    font-size:1.5rem;
+    padding-bottom:0.6rem;
+  }
+  
+  .menu-items{
+    gap:1rem;
+  }
+  
+  .dish-name{
+    font-size:1rem;
+  }
+  
+  .dish-desc{
+    font-size:0.85rem;
+  }
+}
+
+@media (max-width:480px){
+  .menu-sections{
+    gap:1.5rem;
+    margin:1.5rem 0;
+  }
+  
+  .menu-section h3{
+    font-size:1.3rem;
+    padding-bottom:0.5rem;
+    letter-spacing:0.3px;
+  }
+  
+  .menu-items{
+    gap:0.9rem;
+  }
+  
+  .dish-name{
+    font-size:0.95rem;
+  }
+  
+  .dish-desc{
+    font-size:0.8rem;
+    line-height:1.3;
+  }
+}
 
