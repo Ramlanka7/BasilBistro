@@ -113,10 +113,10 @@ body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Ne
   font-weight:400;
   color:#2f7a4a;
   text-align:center;
-  margin:3rem 0 2rem;
+  margin:0.8rem 0 0.5rem;
   letter-spacing:2px;
   position:relative;
-  padding-bottom:1rem;
+  padding-bottom:0.3rem;
 }
 
 .menu-title::after{
@@ -125,7 +125,7 @@ body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Ne
   width:80px;
   height:2px;
   background:#2f7a4a;
-  margin:1rem auto 0;
+  margin:0.3rem auto 0;
   border-radius:2px;
 }
 .page-title{font-size:2.5rem;text-align:center;color:var(--accent-dark);margin:2rem 0 1rem;font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:1px;position:relative;padding-bottom:1rem}
@@ -143,8 +143,8 @@ body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Ne
 .menu-sections{
   display:grid;
   grid-template-columns:1fr;
-  gap:3rem;
-  margin:3rem 0;
+  gap:0.8rem;
+  margin:0.5rem 0;
 }
 
 .menu-section{
@@ -160,8 +160,8 @@ body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Ne
   font-size:1.8rem;
   font-weight:400;
   color:#1a1a1a;
-  margin:0 0 0.3rem;
-  padding-bottom:0.8rem;
+  margin:0 0 0.2rem;
+  padding-bottom:0.5rem;
   border-bottom:2px solid #2f7a4a;
   letter-spacing:1px;
   display:block !important;
@@ -178,7 +178,7 @@ body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Ne
   color:#666;
   font-size:0.95rem;
   font-style:italic;
-  margin:0.5rem 0 1.5rem;
+  margin:0.2rem 0 0.5rem;
   line-height:1.5;
 }
 
